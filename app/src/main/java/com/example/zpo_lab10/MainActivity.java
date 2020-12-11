@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean running;
     private boolean wasRunning;
     private double mass;
-    private double halfLife;
+    private int halfLife;
 
 
 
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
             running = savedInstanceState.getBoolean("running");
             wasRunning = savedInstanceState.getBoolean("wasRunning");
             mass = savedInstanceState.getDouble("mass");
-            halfLife = savedInstanceState.getDouble("halfLife");
+            halfLife = savedInstanceState.getInt("halfLife");
         }
 
         runTimer();
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                              String time = String.format(Locale.getDefault(),
                                      "%d:%02d:%02d",hours, minutes, secs);
 
-                             timeView.setText(time);
+                             timeView.setText("Time: "+time);
 
                              if (running)
                                  seconds++;
@@ -80,8 +80,8 @@ public class MainActivity extends AppCompatActivity {
 //                             String time = String.format(Locale.getDefault(),
 //                                     "%d:%02d:%02d",hours, minutes, secs);
 
-                             massView.setText(String.valueOf(mass));
-                             periodView.setText(String.valueOf(halfLife));
+                             massView.setText("Mass: "+String.valueOf(mass));
+                             periodView.setText("Period: "+String.valueOf(halfLife));
 
                              if (running){
 
