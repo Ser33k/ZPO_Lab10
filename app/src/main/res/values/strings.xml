@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ZPO</string>
+    <string name="startLabel">START</string>
+    <string name="stopLabel">STOP</string>
+    <string name="resetLabel">RESET</string>
+    <string name="massLabel">Mass</string>
+    <string name="halfLifeLabel">Period</string>
+</resources>
